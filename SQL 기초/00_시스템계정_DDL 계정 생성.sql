@@ -1,0 +1,9 @@
+--파일명 : 00_시스템계정_DDL 계정 생성
+
+--아이디 비밀번호 모두 DDL로 설정한 계정 생성
+--세션 설정
+ALTER SESSION SET "_ORACLE_SCRIPT" = TRUE;
+--계정 생성
+CREATE USER DDL IDENTIFIED BY DDL;
+--권한 부여
+GRANT RESOURCE,CONNECT,UNLIMITED TABLESPACE TO DDL;
